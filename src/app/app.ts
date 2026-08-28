@@ -1,12 +1,42 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [CommonModule, FormsModule],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
+
 export class App {
-  protected readonly title = signal('catalog2');
+  products = [
+    { name: 'Ноутбук', price: 32000, quantity: 5 },
+    { name: 'Мишка', price: 900, quantity: 0 },
+    { name: 'Клавіатура', price: 1800, quantity: 7 }
+  ];
+
+  newProduct = {
+    name: '',
+    price: 0,
+    quantity: 0
+  };
+
+  addProduct() {
+    this.products.push({
+      name: this.newProduct.name,
+      price: this.newProduct.price,
+      quantity: this.newProduct.quantity
+    });
+
+    this.newProduct = {
+      name: '',
+      price: 0,
+      quantity: 0
+    };
+  }
+
+  deleteProduct(index: number) {
+    this.products.splice(index, 1);
+  }
 }

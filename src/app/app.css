@@ -1,0 +1,54 @@
+.container {
+  width: 700px;
+  margin: 30px auto;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+.form {
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+input {
+  display: block;
+  width: 95%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+button {
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.product {
+  padding: 20px;
+  margin: 15px 0;
+  border-radius: 10px;
+  border: 2px solid;
+}
+
+.available {
+  border-color: green;
+  background-color: #eaffea;
+}
+
+.unavailable {
+  border-color: red;
+  background-color: #ffeaea;
+}
+
+.product button {
+  margin-top: 10px;
+}
