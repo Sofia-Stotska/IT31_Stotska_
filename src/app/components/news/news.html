@@ -1,0 +1,21 @@
+<main>
+  <h2>Останні новини</h2>
+
+  <app-news-card
+    title="Angular отримав нову версію"
+    author="Іван Петренко"
+    (buttonClicked)="openNews($event)">
+  </app-news-card>
+
+  <app-news-card
+    title="Нові технології у світі IT"
+    author="Олена Коваль"
+    (buttonClicked)="openNews($event)">
+  </app-news-card>
+
+  @if (openedNews) {
+    <div class="message">
+      Відкрито новину: <strong>{{ openedNews }}</strong>
+    </div>
+  }
+</main>
